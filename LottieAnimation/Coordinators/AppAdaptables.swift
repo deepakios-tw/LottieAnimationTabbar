@@ -52,12 +52,12 @@ protocol ScenePresenter {
 
 protocol RowSectionDisplayable {
     var title: String { get }
-   // var content: [Row] { get }
+    // var content: [Row] { get }
 }
 
 protocol RowJournalSectionDisplayable {
     var title: Date { get }
-   // var content: [RowJournal] { get }
+    // var content: [RowJournal] { get }
 }
 
 typealias Dismisser = ControllerDismisser & CoordinatorDimisser

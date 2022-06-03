@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182F85C2283F5C9C00D56D77 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F85C0283F5C9C00D56D77 /* SplashViewController.swift */; };
+		182F85C5283F666900D56D77 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 182F85C4283F666900D56D77 /* splash.json */; };
+		182F85C9283F66BF00D56D77 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 182F85C6283F66BF00D56D77 /* img_1.png */; };
+		182F85CA283F66BF00D56D77 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 182F85C7283F66BF00D56D77 /* img_2.png */; };
+		182F85CB283F66BF00D56D77 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 182F85C8283F66BF00D56D77 /* img_3.png */; };
+		182F85CD283F6A9500D56D77 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F85CC283F6A9400D56D77 /* WelcomeCoordinator.swift */; };
 		187C543228360F500012F696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C543128360F500012F696 /* AppDelegate.swift */; };
 		187C543428360F500012F696 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C543328360F500012F696 /* SceneDelegate.swift */; };
 		187C543628360F500012F696 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C543528360F500012F696 /* HomeViewController.swift */; };
@@ -51,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		092BC715D31052610C36E1EA /* Pods_LottieAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		182F85C0283F5C9C00D56D77 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		182F85C4283F666900D56D77 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		182F85C6283F66BF00D56D77 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		182F85C7283F66BF00D56D77 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
+		182F85C8283F66BF00D56D77 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		182F85CC283F6A9400D56D77 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeCoordinator.swift; path = /Users/apple/Documents/Projects/Git/LottieAnimationTabbar/LottieAnimation/Coordinators/WelcomeCoordinator.swift; sourceTree = "<absolute>"; };
 		187C542E28360F500012F696 /* LottieAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187C543128360F500012F696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187C543328360F500012F696 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +168,7 @@
 			children = (
 				187C5459283626A20012F696 /* AppAdaptables.swift */,
 				187C5469283628750012F696 /* TabbarCoordinator.swift */,
+				182F85CC283F6A9400D56D77 /* WelcomeCoordinator.swift */,
 				187C5455283626A20012F696 /* LoginCoordinator.swift */,
 				187C5456283626A20012F696 /* OnboardingCoordinator.swift */,
 				187C5454283626A20012F696 /* RootCoordinator.swift */,
@@ -194,6 +207,7 @@
 				187C5467283627350012F696 /* ForgotPasswordViewController.swift */,
 				187C5461283627200012F696 /* WelcomeViewController.swift */,
 				187C5465283627290012F696 /* LoginViewController.swift */,
+				182F85C0283F5C9C00D56D77 /* SplashViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +228,10 @@
 				187C547B28364CF10012F696 /* Home_tab.json */,
 				187C547228364CEF0012F696 /* Magazine_tab_orange_light.json */,
 				187C547928364CF10012F696 /* Magazine_tab_orange.json */,
+				182F85C4283F666900D56D77 /* splash.json */,
+				182F85C6283F66BF00D56D77 /* img_1.png */,
+				182F85C7283F66BF00D56D77 /* img_2.png */,
+				182F85C8283F66BF00D56D77 /* img_3.png */,
 				187C547028364CEF0012F696 /* Magazine_tab.json */,
 				187C547828364CF00012F696 /* Profile_tab_orange_light.json */,
 				187C547428364CF00012F696 /* Profile_tab_orange.json */,
@@ -290,9 +308,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182F85CA283F66BF00D56D77 /* img_2.png in Resources */,
 				187C548328364CF20012F696 /* Home_tab_orange.json in Resources */,
 				187C548528364CF20012F696 /* Chat_tab_orange_light.json in Resources */,
 				187C548128364CF20012F696 /* Chat_tab_orange.json in Resources */,
+				182F85CB283F66BF00D56D77 /* img_3.png in Resources */,
 				187C548D28364CF20012F696 /* Diary_tab_orange_light.json in Resources */,
 				187C548B28364CF20012F696 /* Home_tab.json in Resources */,
 				187C548628364CF20012F696 /* Profile_tab.json in Resources */,
@@ -304,6 +324,8 @@
 				187C543B28360F510012F696 /* Assets.xcassets in Resources */,
 				187C548728364CF20012F696 /* Activate_tab_orange.json in Resources */,
 				187C547F28364CF20012F696 /* Home_tab_orange_light.json in Resources */,
+				182F85C9283F66BF00D56D77 /* img_1.png in Resources */,
+				182F85C5283F666900D56D77 /* splash.json in Resources */,
 				187C548A28364CF20012F696 /* Chat_tab.json in Resources */,
 				187C543928360F500012F696 /* Main.storyboard in Resources */,
 				187C548028364CF20012F696 /* Magazine_tab.json in Resources */,
@@ -366,6 +388,7 @@
 				187C544F2836134D0012F696 /* TabBarController.swift in Sources */,
 				187C545B283626A30012F696 /* LoginCoordinator.swift in Sources */,
 				187C543228360F500012F696 /* AppDelegate.swift in Sources */,
+				182F85CD283F6A9500D56D77 /* WelcomeCoordinator.swift in Sources */,
 				187C546A283628750012F696 /* TabbarCoordinator.swift in Sources */,
 				187C544B283612E90012F696 /* NotificationViewController.swift in Sources */,
 				187C5463283627200012F696 /* WelcomeViewController.swift in Sources */,
@@ -373,6 +396,7 @@
 				187C5447283612C30012F696 /* ProfileViewController.swift in Sources */,
 				187C5449283612D70012F696 /* ChatViewController.swift in Sources */,
 				187C5464283627200012F696 /* SignupViewController.swift in Sources */,
+				182F85C2283F5C9C00D56D77 /* SplashViewController.swift in Sources */,
 				187C543428360F500012F696 /* SceneDelegate.swift in Sources */,
 				187C545D283626A30012F696 /* Scenes.swift in Sources */,
 				187C5466283627290012F696 /* LoginViewController.swift in Sources */,

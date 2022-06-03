@@ -8,18 +8,18 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
-  @IBOutlet weak var btnBack: UIButton!
-  @IBOutlet weak var btnLogin: UIButton!
-
-  weak var router: NextSceneDismisser?
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    [ btnBack, btnLogin].forEach {
-        $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
+    
+    weak var router: NextSceneDismisser?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        [ btnBack, btnLogin].forEach {
+            $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        }
     }
-  }
 }
 
 // MARK: Button Action
@@ -34,12 +34,12 @@ extension SignupViewController {
             break
         }
     }
-
+    
     private func loginAction() {
         self.router?.push(scene: .login)
     }
-
+    
     private func backAction() {
-      self.router?.dismiss(controller: .signup)
+        self.router?.dismiss(controller: .signup)
     }
 }

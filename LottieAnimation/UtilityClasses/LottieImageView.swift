@@ -31,7 +31,6 @@ class LottieImageView: UIImageView {
         self.lottieAnimationView?.removeFromSuperview()
         self.lottieAnimationView = lottieAnimationView
     }
-
     
     func loadLottie(url: URL) {
         let lottieAnimationView = AnimationView(filePath: url.path)
@@ -73,9 +72,6 @@ class LottieImageView: UIImageView {
     }
     
 }
-
-
-
 
 ////////////////////
 import UIKit
@@ -155,7 +151,7 @@ extension UIDevice {
         }
         
         switch identifier {
-
+            
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return "iPhone 4"
         case "iPhone4,1":                               return "iPhone 4s"
         case "iPhone5,1", "iPhone5,2":                  return "iPhone 5"
@@ -211,7 +207,7 @@ extension UIDevice {
     static func isScreenLessThan47inch() -> Bool {
         return UIDevice().screenType == .iPhone4 || UIDevice().screenType == .iPhone5
     }
-
+    
     static func isScreenBiggerThan47inch() -> Bool {
         return UIDevice().screenType != .iPhone4 && UIDevice().screenType != .iPhone5 && UIDevice().screenType != .iPhone6
     }
@@ -223,7 +219,7 @@ extension UIDevice {
             return true
         }
     }
-
+    
     static func getCustomKeyboardHeight() -> CGFloat? {
         if let type: ScreenType = UIDevice().screenType {
             switch type {
@@ -282,7 +278,6 @@ extension UIDevice {
             return false
         }
     }
-    
 }
 
 extension UIDevice {
@@ -297,16 +292,13 @@ struct Platform {
     static var isSimulator: Bool {
         return TARGET_OS_SIMULATOR != 0
     }
-    
 }
 
-
-////////////////
 extension UIView {
     func findViews<T: UIView>(subclassOf: T.Type) -> [T] {
         return recursiveSubviews.compactMap { $0 as? T }
     }
-
+    
     var recursiveSubviews: [UIView] {
         return subviews + subviews.flatMap { $0.recursiveSubviews }
     }

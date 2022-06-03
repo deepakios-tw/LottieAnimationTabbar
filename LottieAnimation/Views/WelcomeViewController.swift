@@ -8,19 +8,19 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
-  @IBOutlet weak var btnLogin: UIButton!
-  @IBOutlet weak var btnSignup: UIButton!
-  @IBOutlet weak var btnTabbar: UIButton!
-
-  weak var router: NextSceneDismisser?
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    [ btnLogin, btnSignup, btnTabbar].forEach {
-        $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnSignup: UIButton!
+    @IBOutlet weak var btnTabbar: UIButton!
+    
+    weak var router: NextSceneDismisser?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        [ btnLogin, btnSignup, btnTabbar].forEach {
+            $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        }
     }
-  }
 }
 
 // MARK: Button Action
@@ -37,11 +37,11 @@ extension WelcomeViewController {
             break
         }
     }
-
+    
     private func signupAction() {
         self.router?.push(scene: .signup)
     }
-
+    
     private func loginAction() {
         self.router?.push(scene: .login)
     }

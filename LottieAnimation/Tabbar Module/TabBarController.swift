@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+
 enum TabBarItem: Int {
     case home = 0
     case community
@@ -14,7 +15,6 @@ enum TabBarItem: Int {
     case notification
     case profile
 }
-
 
 class TabBarController: UITabBarController {
     
@@ -29,15 +29,14 @@ class TabBarController: UITabBarController {
     var notification: NotificationViewController = NotificationViewController.from(from: .main, with: .notification)
     var profile: ProfileViewController = ProfileViewController.from(from: .main, with: .profile)
     var tabBarIcons: [UIImage?] = [UIImage(named: "ic_tab_home_unselected"),
-                                  UIImage(named: "ic_tab_magazine_unselected"),
-                                  UIImage(named: "ic_tab_chat_unselected"),
-                                  UIImage(named: "ic_tab_diary_unselected"),
-                                  UIImage(named: "ic_tab_profile_unselected")]
+                                   UIImage(named: "ic_tab_magazine_unselected"),
+                                   UIImage(named: "ic_tab_chat_unselected"),
+                                   UIImage(named: "ic_tab_diary_unselected"),
+                                   UIImage(named: "ic_tab_profile_unselected")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +80,7 @@ extension TabBarController {
         let titleVertical = UIDevice.safeAreaBottomInset() > 0 ? 4 : -2
         let edgeInsets = UIEdgeInsets(top: CGFloat(top), left: 0, bottom: -CGFloat(top), right: 0)
         let titleInsets = UIOffset(horizontal: 0, vertical: CGFloat(titleVertical))
-
+        
         let home = UITabBarItem()
         home.image = UIImage(named: "ic_tab_home_unselected")
         home.title = "Home"
@@ -110,19 +109,19 @@ extension TabBarController {
         
         home.imageInsets = edgeInsets
         home.titlePositionAdjustment = titleInsets
-
+        
         community.imageInsets = edgeInsets
         community.titlePositionAdjustment = titleInsets
-
+        
         chat.imageInsets = edgeInsets
         chat.titlePositionAdjustment = titleInsets
-
+        
         notification.imageInsets = edgeInsets
         notification.titlePositionAdjustment = titleInsets
-
+        
         myAccount.imageInsets = edgeInsets
         myAccount.titlePositionAdjustment = titleInsets
-
+        
         
         self.home.tabBarItem = home
         self.home.router = router
@@ -142,7 +141,6 @@ extension TabBarController {
         self.viewControllers = [self.home, self.community, self.chat, self.notification, self.profile]
         self.setViewControllers(self.viewControllers, animated: true)
         self.loadLottie(play: true, selectedTabIndex: self.selectedTabIndex)
-
     }
 }
 
@@ -184,7 +182,7 @@ extension TabBarController : UITabBarControllerDelegate {
         self.reloadTabBarItemIcons(selectedTabIndex)
         self.playLottieForSelectTabIndex(selectedTabIndex, play: play)
     }
-
+    
     private func lottieList() -> [(String, Int)] {
         var lottieList = [(String, Int)]()
         lottieList.append(("Home_tab_orange_light", TabBarItem.home.rawValue))
@@ -248,7 +246,7 @@ extension TabBarController : UITabBarControllerDelegate {
                 let image = tabBarIcons[tab.tag]
                 if tab.tag != selectedTabIndex {
                     tab.image = image?.withRenderingMode(.alwaysOriginal)
-            }else {
+                }else {
                     tab.image = nil
                 }
             }

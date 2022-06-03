@@ -8,7 +8,7 @@
 import Foundation
 
 enum Scenes:String {
-    case welcome, login, signup, forgot, walkthrough, landing, tabbar, home, community, chat, notification, profile
+    case welcome, login, signup, forgot, walkthrough, landing, tabbar, home, community, chat, notification, profile , splash
 }
 
 enum Storyboard:String {
@@ -16,7 +16,7 @@ enum Storyboard:String {
 }
 
 enum StoryboardIdentifier:String {
-    case welcome, login,signup, forgot, walkthrough, landing, tabbar, home, community, chat, notification, profile
+    case welcome, login,signup, forgot, walkthrough, landing, tabbar, home, community, chat, notification, profile, splash
 }
 
 

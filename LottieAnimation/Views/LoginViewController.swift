@@ -8,19 +8,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-  @IBOutlet weak var btnBack: UIButton!
-  @IBOutlet weak var btnSignup: UIButton!
-  @IBOutlet weak var btnForgotPwd: UIButton!
-
-  weak var router: NextSceneDismisser?
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    [ btnBack, btnSignup, btnForgotPwd].forEach {
-        $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnSignup: UIButton!
+    @IBOutlet weak var btnForgotPwd: UIButton!
+    
+    weak var router: NextSceneDismisser?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        [ btnBack, btnSignup, btnForgotPwd].forEach {
+            $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        }
     }
-  }
 }
 
 // MARK: Button Action
@@ -32,23 +32,21 @@ extension LoginViewController {
         case btnBack:
             self.backAction()
         case btnForgotPwd:
-          self.forgotPwdAction()
+            self.forgotPwdAction()
         default:
             break
         }
     }
-
+    
     private func signupAction() {
         self.router?.push(scene: .signup)
     }
-
+    
     private func forgotPwdAction() {
-      self.router?.push(scene: .forgot)
-   }
-
-    private func backAction() {
-      self.router?.dismiss(controller: .login)
+        self.router?.push(scene: .forgot)
     }
-
-
+    
+    private func backAction() {
+        self.router?.dismiss(controller: .login)
+    }
 }

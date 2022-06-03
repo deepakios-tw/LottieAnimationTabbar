@@ -97,6 +97,67 @@
             </objects>
             <point key="canvasLocation" x="665" y="80"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="Luw-bT-0RA">
+            <objects>
+                <viewController storyboardIdentifier="splash" id="0BY-Hr-wlT" customClass="SplashViewController" customModule="LottieAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZf-hv-vZl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDF-fK-KZu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="mKx-OJ-odN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ONm-QI-rj6">
+                                        <rect key="frame" x="97" y="767.5" width="220" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7xs-B3-xvV"/>
+                                            <constraint firstAttribute="width" constant="220" id="xpP-hC-kip"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="az1-Of-8pn" customClass="LottieImageView" customModule="Dev_Wellthy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="az1-Of-8pn" secondAttribute="height" multiplier="1:1" id="KtD-md-Uah"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="az1-Of-8pn" firstAttribute="width" secondItem="az1-Of-8pn" secondAttribute="height" multiplier="1:1" id="RJX-hl-8PQ"/>
+                                    <constraint firstItem="ONm-QI-rj6" firstAttribute="centerX" secondItem="cDF-fK-KZu" secondAttribute="centerX" id="Xbc-vv-XUB"/>
+                                    <constraint firstAttribute="bottom" secondItem="mKx-OJ-odN" secondAttribute="bottom" id="f4y-p9-wlh"/>
+                                    <constraint firstItem="mKx-OJ-odN" firstAttribute="leading" secondItem="cDF-fK-KZu" secondAttribute="leading" id="fbT-8S-RMd"/>
+                                    <constraint firstAttribute="trailing" secondItem="az1-Of-8pn" secondAttribute="trailing" id="hGf-Zg-VTk"/>
+                                    <constraint firstItem="mKx-OJ-odN" firstAttribute="top" secondItem="cDF-fK-KZu" secondAttribute="top" id="klg-Gn-8hH"/>
+                                    <constraint firstAttribute="bottom" secondItem="ONm-QI-rj6" secondAttribute="bottom" constant="98.5" id="mZ6-wK-iBH"/>
+                                    <constraint firstAttribute="trailing" secondItem="mKx-OJ-odN" secondAttribute="trailing" id="sRq-f5-Kx0"/>
+                                    <constraint firstItem="az1-Of-8pn" firstAttribute="leading" secondItem="cDF-fK-KZu" secondAttribute="leading" id="tcP-4E-bGG"/>
+                                    <constraint firstItem="az1-Of-8pn" firstAttribute="centerY" secondItem="cDF-fK-KZu" secondAttribute="centerY" id="xT9-da-T1a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gdo-x4-XxO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cDF-fK-KZu" secondAttribute="trailing" id="8XH-aY-deE"/>
+                            <constraint firstItem="cDF-fK-KZu" firstAttribute="leading" secondItem="mZf-hv-vZl" secondAttribute="leading" id="8oa-hW-1FI"/>
+                            <constraint firstItem="cDF-fK-KZu" firstAttribute="top" secondItem="mZf-hv-vZl" secondAttribute="top" id="OOZ-1B-HD4"/>
+                            <constraint firstAttribute="bottom" secondItem="cDF-fK-KZu" secondAttribute="bottom" id="xhW-xj-kvQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashView" destination="az1-Of-8pn" id="00d-sV-v8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJJ-Wm-WwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1294" y="-654"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="oQr-sn-gfh">
             <objects>
@@ -338,6 +399,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Splash" width="375" height="812"/>
+        <image name="splash_Logo" width="220" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
